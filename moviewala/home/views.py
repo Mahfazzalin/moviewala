@@ -8,5 +8,10 @@ def home_page(request):
     return HttpResponse('<h1>Home Page</h1>')
 
 
-def bkash(request):
+def bk(request):
     return HttpResponse('payments using Bkash')
+
+
+def add(request):
+    z = 123456678900*345678
+    return HttpResponse(z)

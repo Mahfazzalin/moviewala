@@ -16,10 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from home import views
+from home import views as hv
+from listing_details import views as ldv
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home_page),
-    path('bkash/', views.bkash),
+    path('', hv.home_page),
+    path('bkash/', hv.bk),
+    path('math', hv.add),
+    path('hindi', ldv.hindi)
 ]
