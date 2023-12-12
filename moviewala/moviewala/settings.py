@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'home',
     'listing_details',
-    'user_authentication'
+    'user_authentication',
 ]
 
 MIDDLEWARE = [
