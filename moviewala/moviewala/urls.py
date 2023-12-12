@@ -20,5 +20,6 @@ from home import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.django),
+    path('', views.home_page),
+    path('bkash/', views.bkash),
 ]
