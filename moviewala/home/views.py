@@ -14,4 +14,5 @@ def bk(request):
 
 def add(request):
     z = 123456678900*345678
+    print(z)
     return HttpResponse(z)
