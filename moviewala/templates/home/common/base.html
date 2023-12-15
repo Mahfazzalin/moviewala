@@ -7,7 +7,9 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{% block title %}{% endblock title %}</title>
+    {% block css %}
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% endblock css %}
 </head>
 <body>
     <nav>
@@ -18,7 +20,10 @@
             <li>search</li>
         </ol>
     </nav>
+    {% block img %}
     <img src="{% static 'images/dark-knight-rider-r7c66deb5ecrjtwd.jpg' %}" alt="">
+    {% endblock img %}
+
     {% block content %}{% endblock content %}
 </body>
 </html>
