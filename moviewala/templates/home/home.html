@@ -1,14 +1,9 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Welcome to MovieWala</title>
-</head>
-<body>
-<p>{{dt}}</p>
-<h1>{{welcome | capfirst}}</h1>
-</body>
-</html>
+{% extends 'home/common/base.html' %}
+{% load static %}
+{% block title %}home{% endblock title %}
+
+{% block img %}
+    <img src="{% static 'images/20220822_180914-01.jpeg' %}" alt="">
+{% endblock img %}
+{% block content %}<h2>Welcome to MovieWala</h2>{% endblock content %}
+{% block css %}<link rel="stylesheet" href="{% static 'css/style1.css' %}">{% endblock css %}
