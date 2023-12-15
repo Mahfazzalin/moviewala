@@ -12,10 +12,11 @@ def home_page(request):
 
 
 def bk(request):
-    return HttpResponse('payments using Bkash')
+    name = {'friends': ['Noyon', 'Minhaz', 'Setul', 'audhikary']}
+
+    return render(request, 'home/bkash/bkash.html', name)
 
 
 def add(request):
-    z = 123456678900*345678
-    print(z)
-    return HttpResponse(z)
+
+    return render(request, 'home/common/base.html')
