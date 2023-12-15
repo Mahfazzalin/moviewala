@@ -12,9 +12,8 @@ def home_page(request):
 
 
 def bk(request):
-    name = {'friends': ['Noyon', 'Minhaz', 'Setul', 'audhikary']}
 
-    return render(request, 'home/bkash/bkash.html', name)
+    return render(request, 'home/bkash/bkash.html')
 
 
 def add(request):
