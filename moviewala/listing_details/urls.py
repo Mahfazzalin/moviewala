@@ -4,7 +4,7 @@ from . import views
 
 urlpatterns = [
     path('hindi', views.hindi),
-    path('movie/', views.movie_method),
+    path('movies/', views.movie_method, name='moviedata'),
 
 
 ]
