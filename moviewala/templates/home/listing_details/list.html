@@ -1,6 +1,42 @@
 {% extends 'home/common/base.html' %}
 {% load static %}
-{% block title %}Bkash{% endblock title %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/table.css' %}">
+    {% endblock css %}
+{% block title %}Movies{% endblock title %}
 {% block content %}
-    <h1>testing html inheritance</h1>
+    {% if movie %}
+    <table>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>cover_link</th>
+            <th>language</th>
+            <th>subtitle</th>
+            <th>description</th>
+            <th>drive_link</th>
+            <th>screenshot_1</th>
+            <th>screenshot_2</th>
+            <th>screenshot_3</th>
+            <th>screenshot_4</th>
+        </tr>
+        {% for mov in movie %}
+        <tr>
+            <td>{{ mov.id }}</td>
+            <td>{{ mov.name }}</td>
+            <td>{{ mov.cover_link }}</td>
+            <td>{{ mov.language }}</td>
+            <td>{{ mov.subtitle }}</td>
+            <td>{{ mov.description }}</td>
+            <td>{{ mov.drive_link }}</td>
+            <td>{{ mov.screenshot_1 }}</td>
+            <td>{{ mov.screenshot_2 }}</td>
+            <td>{{ mov.screenshot_3 }}</td>
+            <td>{{ mov.screenshot_4 }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <h2>not available any data</h2>
+    {% endif %}
 {% endblock content %}
