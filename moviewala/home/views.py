@@ -6,9 +6,8 @@ from datetime import datetime
 # Create your views here.
 
 def home_page(request):
-    d = datetime.now()
-    dt = {'dt': d, 'welcome': 'Welcome to MovieWala. Enjoy your moment.'}
-    return render(request, 'home/home.html', context=dt)
+
+    return render(request, 'home/home.html')
 
 
 def bk(request):
