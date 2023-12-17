@@ -11,5 +11,5 @@ def hindi(request):
 
 
 def movie_method(request):
-    mov_method = movie_details.object.all()
-    return render(request, 'listing_details/list.html', {'movie': mov_method})
+    mov_method = movie_details.objects.all()
+    return render(request, 'home/listing_details/list.html', {'movie': mov_method})
