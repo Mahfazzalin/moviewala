@@ -1,0 +1,10 @@
+body{
+    background-color: #E434DB;
+}
+img{
+    height: 300px;
+    width: 300px;
+}
+th,td{
+    border: 5px solid skyblue;
+}
