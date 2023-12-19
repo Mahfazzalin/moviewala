@@ -13,12 +13,12 @@
             <th>cover_link</th>
             <th>language</th>
             <th>subtitle</th>
-            <th>description</th>
-            <th>drive_link</th>
-            <th>screenshot_1</th>
-            <th>screenshot_2</th>
-            <th>screenshot_3</th>
-            <th>screenshot_4</th>
+            <th>textbox</th>
+            <th>d_link</th>
+            <th>ss_1</th>
+            <th>ss_2</th>
+            <th>ss_3</th>
+            <th>ss_4</th>
         </tr>
         {% for mov in movie %}
         <tr>
@@ -27,12 +27,12 @@
             <td>{{ mov.cover_link }}</td>
             <td>{{ mov.language }}</td>
             <td>{{ mov.subtitle }}</td>
-            <td>{{ mov.description }}</td>
-            <td>{{ mov.drive_link }}</td>
-            <td>{{ mov.screenshot_1 }}</td>
-            <td>{{ mov.screenshot_2 }}</td>
-            <td>{{ mov.screenshot_3 }}</td>
-            <td>{{ mov.screenshot_4 }}</td>
+            <td>{{ mov.textbox }}</td>
+            <td>{{ mov.d_link }}</td>
+            <td>{{ mov.ss_1 }}</td>
+            <td>{{ mov.ss_2 }}</td>
+            <td>{{ mov.ss_3 }}</td>
+            <td>{{ mov.ss_4 }}</td>
         </tr>
         {% endfor %}
     </table>
