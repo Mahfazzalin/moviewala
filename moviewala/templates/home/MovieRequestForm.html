@@ -6,7 +6,18 @@
 </head>
 <body>
     <form action="" method="get">
-        {{form}}
+        {{form.as_div}}
+        <br>
+        <input type="submit" value="submit">
+        <hr>
+        <div>
+            {{form.subject.label_tag}}
+            {{form.subject}}<br><br>
+            {{form.email.label_tag}}
+            {{form.email}}<br><br>
+            {{form.Moviename.label_tag}}
+            {{form.Moviename}}
+        </div>
         <input type="submit" value="submit">
     </form>
 
