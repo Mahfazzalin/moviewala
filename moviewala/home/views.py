@@ -21,4 +21,3 @@ def add(request):
 def movie_request(request):
     frm = MovieRequest()
     return render(request, 'home/MovieRequestForm.html', {'form': frm})
-
