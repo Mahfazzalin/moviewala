@@ -19,5 +19,5 @@ def add(request):
 
 
 def movie_request(request):
-    frm = MovieRequest()
+    frm = MovieRequest(auto_id=True)
     return render(request, 'home/MovieRequestForm.html', {'form': frm})
