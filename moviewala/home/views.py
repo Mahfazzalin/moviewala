@@ -19,13 +19,15 @@ def add(request):
 
 
 def movie_request(request):
-    if request.method == 'post':
-        frm = MovieRequest(request.post)
-        print(frm)
-        print('post statement')
+    if request.method == 'POST':
+        frm = MovieRequest(request.POST)
+        if frm.is_valid():
+            print('valid form')
+            print(frm.cleaned_data)
     
     else:
         frm = MovieRequest(auto_id=True, label_suffix=' :')
-    
+        print('get statement')
+
     #frm.order_fields(field_order=['From', 'To', 'subject', 'Moviename'])
     return render(request, 'home/MovieRequestForm.html', {'form': frm})

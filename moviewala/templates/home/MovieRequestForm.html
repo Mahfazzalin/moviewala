@@ -5,7 +5,7 @@
     <title>Movie Request from</title>
 </head>
 <body>
-    <form action="" method="post">
+    <form action="" method="POST" novalidate>
         {% csrf_token %}
         {{form.as_div}}
         <br>

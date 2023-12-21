@@ -7,4 +7,4 @@ class MovieRequest(forms.Form):
     subject = forms.CharField(max_length=150, widget=forms.PasswordInput)
     Moviename = forms.CharField(max_length=500, help_text='Enter your movie name', widget=forms.Textarea)
     checkbox = forms.CharField(widget=forms.CheckboxInput)
-    file = forms.CharField(widget=forms.FileInput)
+    #file = forms.CharField(widget=forms.FileInput)
