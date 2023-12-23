@@ -29,5 +29,5 @@ def movie_request(request):
         frm = MovieRequest(auto_id=True, label_suffix=' :')
         print('get statement')
 
-    #frm.order_fields(field_order=['From', 'To', 'subject', 'Moviename'])
+    # frm.order_fields(field_order=['From', 'To', 'subject', 'Moviename'])
     return render(request, 'home/MovieRequestForm.html', {'form': frm})
