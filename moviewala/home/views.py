@@ -18,6 +18,8 @@ def bk(request):
 def add(request):
     return render(request, 'home/common/base.html')
 
+def successfully(request):
+    return render(request, 'home/successfully.html')
 
 def movie_request(request):
     if request.method == 'POST':
@@ -25,7 +27,7 @@ def movie_request(request):
         if frm.is_valid():
             print('valid form')
             print(frm.cleaned_data)
-            return HttpResponseRedirect('/home/successfully.html')
+            return HttpResponseRedirect('/home/successfully/')
     
     else:
         frm = MovieRequest(auto_id=True, label_suffix=' :')
