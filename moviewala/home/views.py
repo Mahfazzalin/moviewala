@@ -26,7 +26,10 @@ def movie_request(request):
         frm = MovieRequest(request.POST)
         if frm.is_valid():
             print('valid form')
-            print(frm.cleaned_data)
+            print('From :',frm.cleaned_data['From'])
+            print('To :',frm.cleaned_data['To'])
+            print('subject :',frm.cleaned_data['subject'])
+            print('Moviename :',frm.cleaned_data['Moviename'])
             return HttpResponseRedirect('/home/successfully/')
 
     else:
