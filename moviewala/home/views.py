@@ -1,4 +1,5 @@
-from django.http import HttpResponse
+#from django.http import HttpResponse
+from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from datetime import datetime
 from home.forms import MovieRequest
@@ -24,6 +25,7 @@ def movie_request(request):
         if frm.is_valid():
             print('valid form')
             print(frm.cleaned_data)
+            return HttpResponseRedirect('/home/successfully.html')
     
     else:
         frm = MovieRequest(auto_id=True, label_suffix=' :')
