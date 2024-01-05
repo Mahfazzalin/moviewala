@@ -9,3 +9,10 @@ class MovieRequest(forms.Form):
     re_subject = forms.CharField(max_length=20, min_length=6, error_messages={'required':'Enter a Subject Name'})
     Moviename = forms.CharField(max_length=500, help_text='Enter your movie details', widget=forms.Textarea(attrs={'rows':4 ,'cols':40}))
     #checkbox = forms.CharField(widget=forms.CheckboxInput)
+
+def clean(self):
+    cleaned_data = super().clean()
+    subject_match = self.cleaned_data['subject']
+    re_subject_match = self.cleaned_data['re_subject']
+    if subject_match != re_subject_match :
+        raise forms.ValidationError("subject doesn't match")

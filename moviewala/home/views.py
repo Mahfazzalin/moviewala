@@ -29,6 +29,7 @@ def movie_request(request):
             print('From :',frm.cleaned_data['From'])
             print('To :',frm.cleaned_data['To'])
             print('subject :',frm.cleaned_data['subject'])
+            print('re_subject :',frm.cleaned_data['re_subject'])
             print('Moviename :',frm.cleaned_data['Moviename'])
             return HttpResponseRedirect('/home/successfully/')
 
